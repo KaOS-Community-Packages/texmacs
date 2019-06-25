@@ -1,5 +1,5 @@
 pkgname=texmacs
-pkgver=1.99.8
+pkgver=1.99.9
 pkgrel=1
 pkgdesc="WYSIWYG free scientific text editor and graphical frontend to various CASes \n
 (Giac, GTybalt, Macaulay 2, Maxima, Octave, Pari, Qcl, R and Yacas)"
@@ -16,11 +16,11 @@ optdepends=(
 makedepends=('ghostscript' 'cmake' 'cairo' 'imlib2')
 options=('!emptydirs')
 source=("http://www.texmacs.org/Download/ftp/tmftp/source/TeXmacs-$pkgver-src.tar.gz"
-        'texmacs-fix-linking.patch'
+        #'texmacs-fix-linking.patch'
         'http://www.texmacs.org/Images/tm_gnu1b.png'
         'texmacs.desktop')
-md5sums=('603cd25689702759a06984005ec15199'
-         'bc683a7c6b961bcf6a41bdb5f35e488f'
+md5sums=('9b3417efd46b9c8d538697074abca291'
+         #'bc683a7c6b961bcf6a41bdb5f35e488f'
          '48c15c09000cc38728d847c3a8ffabc0'
          'a1856736b4defd6f3a46cf608b108ef1')
 
@@ -33,7 +33,7 @@ prepare() {
     TeXmacs/misc/inkscape_extension/texmacs_reedit.py
   sed -i 's/"python"/"python2"/' plugins/python/progs/init-python.scm
   sed -e 's/-Wno-deprecated-register//g' -i CMakeLists.txt
-  patch -p1 -i ../texmacs-fix-linking.patch # Fix linking thanks ArchLinux PKGBUILD
+  #patch -p1 -i ../texmacs-fix-linking.patch # Fix linking thanks ArchLinux PKGBUILD
 }
 
 build() {
