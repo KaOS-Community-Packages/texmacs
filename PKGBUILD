@@ -1,5 +1,5 @@
 pkgname=texmacs
-pkgver=1.99.11
+pkgver=1.99.12
 pkgrel=1
 pkgdesc="WYSIWYG free scientific text editor and graphical frontend to various CASes \n
 (Giac, GTybalt, Macaulay 2, Maxima, Octave, Pari, Qcl, R and Yacas)"
@@ -18,7 +18,7 @@ options=('!emptydirs')
 source=("http://www.texmacs.org/Download/ftp/tmftp/source/TeXmacs-$pkgver-src.tar.gz"
         'http://www.texmacs.org/Images/tm_gnu1b.png'
         'texmacs.desktop')
-md5sums=('74f6060baa63cc770c64dd21541cc737'
+md5sums=('9c8169ff79afefc606564e530ec12ec9'
          '48c15c09000cc38728d847c3a8ffabc0'
          'a1856736b4defd6f3a46cf608b108ef1')
 
